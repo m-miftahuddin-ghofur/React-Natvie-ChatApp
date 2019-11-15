@@ -114,6 +114,7 @@ export default class ChatPrivate extends React.Component {
                 </FlatList>
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                     <TextInput
+                        returnKeyType='send'
                         style={styles.input}
                         value={this.state.textMessage}
                         onChangeText={this.handleChange('textMessage')}

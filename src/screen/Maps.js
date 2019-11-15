@@ -6,17 +6,10 @@ import MapView, { Marker } from "react-native-maps";
 export default Maps = () => (
     <View style={styles.container}>
         <MapView
-            // onMapReady={() => {
-            //     PermissionsAndroid.request(
-            //       PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-            //     ).then(granted => {
-            //       alert(granted) // just to ensure that permissions were granted
-            //     });
-            //   }}
-              showsMyLocationButton={true}
-              showsUserLocation={true}
+            showsMyLocationButton={true}
+            showsUserLocation={true}
             style={styles.map}
-            initialRegion={{ // initial region set to Bileto
+            initialRegion={{ 
                 latitude: -7.7956,
                 longitude: 110.3695,
                 latitudeDelta: 0.0922,
@@ -29,6 +22,10 @@ export default Maps = () => (
                  latitude: -7.7956,
                 longitude: 110.3695,
             }} />
+            <Marker coordinate={{
+                latitude:-7.756147,
+               longitude: 110.377282,
+           }} />
         </MapView>
     </View>
 );
